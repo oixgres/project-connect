@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import Form from '../Form';
+import LoginForm from '../LoginForm';
 
 import { Grid, Card } from 'semantic-ui-react';
 
@@ -13,7 +13,7 @@ const Register = () => {
                 </Grid.Column>
                 <Grid.Column style={{padding:'5rem'}}>
                     <Card fluid>
-                        <Form
+                        <LoginForm
                             title="Project-Connect"
                             placeHolders={[
                                 "Introduce your name",
@@ -24,10 +24,13 @@ const Register = () => {
                                 name: 'Sign up',
                                 link: '/'
                             }}
+                            aLink={{
+                                name:'Did you forget your password?',
+                                link:'/'
+                            }}
                         />
                     </Card>
                 </Grid.Column>
-            
             </Grid>
            
         </div>
