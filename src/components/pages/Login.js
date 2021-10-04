@@ -15,10 +15,10 @@ const Register = () => {
                     <Card fluid>
                         <LoginForm
                             title="Project-Connect"
-                            placeHolders={[
-                                "Introduce your name",
-                                "Introuce your paassword"
-                            ]}
+                            placeholders={{
+                                mail:"Introduce your name",
+                                pass:"Introuce your password"
+                            }}
                             submitButton="Log in"
                             linkButton={{
                                 name: 'Sign up',
