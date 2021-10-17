@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import LoginForm from '../LoginForm';
+import LoginExample from '../LoginExample';
 
 import { Grid, Card } from 'semantic-ui-react';
 
@@ -8,8 +9,8 @@ const Register = () => {
     return (
         <div>
             <Grid columns={2} relaxed stackable>
-                <Grid.Column style={{padding:'5rem'}}>
-                    <p>Prueba</p>
+                <Grid.Column style={{padding:'5rem', outerHeight:'100px'}}>
+                    <LoginExample />
                 </Grid.Column>
                 <Grid.Column style={{padding:'5rem'}}>
                     <Card fluid>

@@ -19,13 +19,14 @@ const LoginForm = (props) => {
                     email: Yup.string()
                     .email('Invalid email')
                     .required('This field is required'),
-                    pass: Yup.string()
-                    .required('Required')
+                    password: Yup.string()
+                    .required('This field is required')
                 })}
                 onSubmit={(values) => console.log(values)}
             >
                 {({values, touched, errors, handleChange, handleSubmit, handleBlur})=>(
                     <form>
+                        {/* Entradas de datos */}
                         <Input 
                             fluid
                             size='big'
@@ -35,7 +36,7 @@ const LoginForm = (props) => {
                             onBlur={handleBlur('email')}
                             value={values.email}
                         />
-                        {errors.email && touched.email ? <div style={{color: 'red'}}>{errors.email}</div> : <></>}
+                        {errors.email && touched.email ? <div style={{color: 'red'}}>{errors.email}</div> : null}
                         <Input
                             fluid
                             type="password"
@@ -46,9 +47,10 @@ const LoginForm = (props) => {
                             onBlur={handleBlur('password')}
                             value={values.password}
                         />
+                        {errors.password && touched.password ? <div style={{color: 'red'}}>{errors.password}</div>: null}
 
+                    {/* Recuperar clave */}
                     <div style={{textAlign: 'center', marginTop:0, marginBottom:'3rem'}}>
-                        {/* Recuperar clave */}
                         {props.aLink ?<a href={props.aLink.link} style={{fontSize:'15px'}}>{props.aLink.name}</a>:<></>}
                     </div>
 
