@@ -1,5 +1,14 @@
-.example-container div {
-    background: linear-gradient(180deg, #9c1aff 0%, rgb(0, 0, 255) 100%);
+.drag-container p{
+    /* background: linear-gradient(180deg, #9c1aff 0%, rgb(0, 0, 255) 100%); */
+    /* Extra */
+    background-color: gray;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Extra */
+
+
     border-radius: 100px;
     width: 150px;
     height: 150px;
@@ -8,9 +17,16 @@
     left: calc(50% - 150px / 2);
 }
 
-.example-container .drag-area {
+.drag-container .drag-area {
+    /* Extra */
+    display: flex;
+    justify-content: center;
+    /* Extra */
+
+
+
     opacity: 0.2;
-    background: black;
+    background: blue;
     position:sticky;
     width: 500px;
     height: 500px;

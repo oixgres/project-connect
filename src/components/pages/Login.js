@@ -9,10 +9,11 @@ const Register = () => {
     return (
         <div>
             <Grid columns={2} relaxed stackable>
-                <Grid.Column style={{padding:'5rem', outerHeight:'100px'}}>
+                {/* <Grid.Column style={{padding:'5rem', outerHeight:'100px'}}> */}
+                <Grid.Column style={{padding:'5rem'}} mobile={16} tablet={16} computer={8}>
                     <LoginExample />
                 </Grid.Column>
-                <Grid.Column style={{padding:'5rem'}}>
+                <Grid.Column style={{padding:'5rem'}} mobile={16} tablet={16} computer={8}>
                     <Card fluid>
                         <LoginForm
                             title="Project-Connect"
