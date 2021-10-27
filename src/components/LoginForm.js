@@ -3,9 +3,16 @@ import React from 'react';
 import {Button, Input, Form as SemanticForm, Icon, Grid } from 'semantic-ui-react';
 import {Formik} from 'formik';
 import * as Yup from 'yup';
+import { useHistory } from 'react-router';
 
 
 const LoginForm = (props) => {
+    const history = useHistory();
+
+    const handleRegister = () => {
+        history.push(props.aLink.link);
+    }
+    
     return (
         <div style={{margin: '4rem'}}>
             {/* Titulo y logo */}
@@ -55,16 +62,16 @@ const LoginForm = (props) => {
                     </div>
 
                     <Grid.Row>
-                        {/* Boton de inicio de sesion */}
+                        {/* Boton de registro */}
                         {
                             props.linkButton ?
-                            <Button animated color='green' floated='right' size='big' style={{marginLeft:'1rem'}}>
+                            <Button animated color='green' floated='right' size='big' style={{marginLeft:'1rem'}} onClick={handleRegister}>
                                 <Button.Content visible>{props.linkButton.name}</Button.Content>
                                 <Button.Content  hidden><Icon name='file alternate outline'></Icon></Button.Content>
                             </Button>:<></>
                         }
 
-                        {/* Boton de registro */}
+                        {/* Boton de inicio de sesion */}
                         <Button animated content='primary' primary floated='right' size='big' type='submit' onClick={handleSubmit}>
                             <Button.Content visible>{props.submitButton}</Button.Content>
                             <Button.Content hidden><Icon name='arrow right'></Icon></Button.Content>

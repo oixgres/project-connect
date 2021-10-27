@@ -28,7 +28,7 @@ const Register = () => {
                             }}
                             aLink={{
                                 name:'Did you forget your password?',
-                                link:'/'
+                                link:'/register'
                             }}
                         />
                     </Card>

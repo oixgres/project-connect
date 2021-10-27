@@ -1,37 +1,35 @@
+:root{
+    --container-width: 75px;
+    --container-height: 75px;
+}
+
 .drag-container p{
-    /* background: linear-gradient(180deg, #9c1aff 0%, rgb(0, 0, 255) 100%); */
     /* Extra */
     background-color: gray;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Extra */
-
-
+    
+    /* Original */
     border-radius: 100px;
-    width: 150px;
-    height: 150px;
+    width: var(--container-width);
+    height: var(--container-height);
     position: absolute;
-    top: calc(50% - 150px / 2);
-    left: calc(50% - 150px / 2);
+    top: calc(50% - var(--container-height) / 2);
+    left: calc(50% - var(--container-width) / 2);
 }
 
 .drag-container .drag-area {
     /* Extra */
     display: flex;
     justify-content: center;
-    /* Extra */
-
-
-
+    
+    /* Original */
     opacity: 0.2;
     background: blue;
     position:sticky;
-    width: 500px;
-    height: 500px;
     border-radius: 30px;
-    top: calc(50% - 200px);
-    left: calc(50% - 200px);
+    right: 0;
   }
   
